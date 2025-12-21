@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Carlin Hub Key</title>
+</head>
+<body style="background:#111;color:white;text-align:center;margin-top:100px;font-family:Arial">
 
+<h1>CARLIN HUB</h1>
+<p>Clique para gerar sua key</p>
+
+<button onclick="gen()" style="padding:15px 30px;font-size:18px">GERAR KEY</button>
+
+<h2 id="k"></h2>
+
+<script>
+function r(l){
+  const c="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  let s="";
+  for(let i=0;i<l;i++) s+=c[Math.floor(Math.random()*c.length)];
+  return s;
+}
+function gen(){
+  document.getElementById("k").innerText =
+    "CARLIN-" + r(4) + "-" + r(4);
+}
+</script>
+
+</body>
+</html>
